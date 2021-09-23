@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,300;1,700&display=swap');
+ :root {
+    /* Color Theme Swatches in RGBA */
+    --fontColor: rgba(59, 66, 89, 1);
+    --nonameColor: rgba(77, 107, 165, 1);
+    --hoverIconColor: #F2C84B;
+    --aletrColor: #8C0303;
+    --MotoMania-3-rgba: rgba(242, 242, 242, 1);
+    --activeTaskButton: rgba(216, 216, 216, 1);
+    --borderColor: rgba(165, 165, 165, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.body {
+    position: relative;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    color: var(--fontColor);
+    font-size: 2vw;
+    padding: 3vh 0;
+    height: 100vh;
+    min-width: 1024px;
+    min-height: 770px;
+    max-width: 1444px;
+    max-height: 1080px;
+
+}
+
+
+/* End Service Employee Service  */
+
+.body.esServis {
+    position: relative;
+    grid-template-columns: 30% 64%;
+    grid-template-rows: 10% 80%;
+    grid-template-areas: "info logo" "tasks table "; 
+}
+
+.esServis nav {
+    overflow: hidden;
+    grid-area: info;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    text-align: left;
+    
+}
+
+.esServis nav h6 {
+    position: relative;
+    left: 30%
+}
+
+.esServis nav i {
+    position: absolute;
+    left: -20%;
+    transform: translateX(-50%);
+}
+
+.esServis header {
+    overflow: hidden;
+    grid-area: logo;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    text-align: center;
+    border-bottom: 1px var(--borderColor) solid;
+}
+
+.esServis img {
+    position: relative;
+    top: 35%;
+    width: 50%;
+}
+
+.esServis main {
+    position: relative;
+    overflow: hidden;
+    grid-area: tasks;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.esServis main div.boxTask {
+    position: relative;
+    flex-basis: 95%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 25%;
+    border: 1px var(--borderColor)solid;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    transition: .5s;
+}
+
+.esServis main div.boxTask:hover {
+    background-color: var(--activeTaskButton)
+}
+
+
+.esServis main div.boxTask i {
+    position: absolute;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    right: 15%;
+    font-size: 130%;
+    transition: .5s;
+}
+
+
+.esServis main div.boxTask:hover i {
+    font-size: 150%;
+}
+
+.esServis main div.boxTask:hover:nth-of-type(1) i {
+     color: crimson;
+}
+
+.esServis main div.boxTask:hover:nth-of-type(2) i {
+    color: orange;
+}
+
+.esServis main div.boxTask:hover:nth-of-type(3) i {
+    color: green;
+}
+
+
+.esServis main div.boxTask h3 {
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.esServis main div.boxTask h5 {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 150%;
+    color: black;
+    transition: 0.2s;
+}
+
+.esServis main div.boxTask:hover h5{
+    font-size: 180%;
+}
+
+.esServis aside {
+    position: relative;
+    grid-area: table;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    box-sizing: border-box;
+
+}
+
+
+/* table  */
+
+.esServis aside .inputSearch {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: 95%;
+    height: 5%;
+    overflow: hidden;
+ 
+}
+
+.esServis aside .tableSection {
+    overflow: hidden;
+    position: relative;
+    height: 85%;
+    flex-basis: 95%;
+}
+
+.inputSearch input {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    font-size: 80%;
+    transition: .2s;
+    border: none;
+}
+
+
+
+.inputSearch input:focus {
+    outline: none;
+    background-color: yellow;
+    border-bottom: 1px solid gray;
+}
+.loadDateToTable{
+    position: absolute;
+    left:10%;
+    top:15%;
+    transform: translateY(-50%);
+    color: red;
+}
+
+table {
+    
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+
+table a {
+    color: var(--fontColor);
+    transition: .2s;
+    margin-left: 3px;
+}
+
+table a:hover {
+    color: black;
+    margin: 2px;
+    font-size: 150%;
+}
+
+.tbl-content {
+    max-height: 60%;
+    overflow-x: auto;
+    border-bottom: 1px black solid;
+    
+}
+
+th {
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 300;
+    font-size:80%;
+    color: var(--MotoMania-3-rgba);
+    text-transform: uppercase;
+    background-color: var(--fontColor);
+
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 100;
+    font-size: 60%;
+}
+
+td:nth-last-of-type(1) {
+    letter-spacing: 5px;
+}
+
+tr {
+    box-sizing: border-box;
+    line-height: 100%;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+/*  View Client  */
+.currentlyViewClient {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px black solid;
+
+}
+
+.currentlyViewClient .exitClient {
+    position:absolute;
+    top:1%;
+    right:1%;
+    color:black;
+}
+
+.exitClient:hover {
+   color: red;
+}
+
+ .wrapperGrid {
+    display: grid;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: [col1-start] 33.333%  [col2-start] 33.333% [col3-start] 33.333% [col3-end];
+    grid-template-rows: [row1-start] 20% [row2-start] 60% [row2-end];
+  }
+  .boxClient {
+    position: relative;
+    box-sizing: border-box;
+    padding: 5%;
+    font-size: 80%;
+  }
+
+  .logoClient {
+    grid-column: col1-start / col3-start;
+    grid-row: row1-start ;
+    overflow: hidden;
+  }
+  .logoClient img {
+    position: absolute;
+    top:0;
+    left:0;
+    
+  }
+
+  .informationClient{
+    grid-column: col3-start ;
+    grid-row: row1-start / row2-end;
+  }
+  
+  label {
+      display: block;
+      margin-top: 3%;
+      font-size: 70%;
+
+  }
+
+  .boxClient input[type=text] {
+    box-sizing: border-box;
+    display: block;
+    width: 80%;
+    padding: 2% 2%;
+    border: none;
+    border-bottom: 1px solid gray;
+    transition: .2s;
+  }
+  .boxClient input[type=text]:focus{
+      outline: none;
+      border-bottom: 2px solid red;
+      background-color:whitesmoke;
+  }
+  .informationClient textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 40%;
+    padding: 2% 2%;
+  }
+
+  .basicDataRepresentative{
+    grid-column: col2-start;
+    grid-row: row2-start 
+  }
+  .basicDataCompany{
+    grid-column: col1-start ;
+    grid-row: row2-start ;
+  }
+  .submitClientEdit{
+      position:absolute;
+      bottom: 21%;
+      right: 2%;
+      border: none;
+      color: black;
+      background-color: transparent;
+      padding: 1% 3%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      overflow: hidden;
+      border-bottom: 1px gray solid;
+  }
+  
+  .submitClientEdit i{
+      font-size: 120%;
+      margin-right: 2%;
+      display: none;
+      transition: .2s;
+  }
+  .submitClientEdit:hover i{
+     display: block
+  }
+  .buttonContainerClient{
+      position: absolute;
+      bottom: 0;
+      height: 20%;
+      width: 100%;
+ 
+  }
+  .buttonWrapper{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .buttonWrapper button{
+      box-sizing: border-box;
+      padding: 4% 7%;
+      font-size: 70%;
+      border: none;
+      background-color:transparent;
+      transition: .2s;
+  }
+
+  .buttonWrapper button:hover{
+      font-size: 130%;
+      cursor: pointer;
+    
+  }
+  .buttonWrapper i {
+      display: block;
+      font-size: 160%
+  }
+
+  
+  
+/* right qucik access */
+
+.esServis .quickAccess {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.esServis .quickAccess a {
+    display: block;
+    text-align: center;
+    font-size: 100%;
+    margin: 60% 0;
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+.esServis .quickAccess p {
+    font-size: 35%;
+    text-transform: uppercase;
+}
+
+.esServis .quickAccess a:hover i {
+    color: var(--hoverIconColor);
+}
+
+.esServis footer {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    box-sizing: border-box;
+    padding: 3%;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15%;
+    width: 80%;
+    background-color: var( --MotoMania-3-rgba);
+    border-radius: 9px 8px 0px 0px;
+    border: 1px var(--borderColor) solid;
+}
+.esServis footer a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 80%;
+    color: var(--nonameColor);
+    transition: .2s;
+}
+.esServis footer a i {
+    display: block;
+    font-size: 145%;
+    padding-bottom: 9px;
+    transition: .2s;
+}
+
+.esServis footer a:hover i {
+    color: var(--hoverIconColor);
+}
+
+
+.esServis .arrows {
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 1%;
+    font-size: 100%;
+    z-index: 3;
+}
+
+.esServis .arrows.on i {
+    transform: rotate(180deg);
+}
+
+.esServis .arrows.on {
+    bottom: 15%;
+    color:red;
+    animation : pulse 1s infinite linear;
+}
+
+.esServis footer.on {
+    bottom: 0;
+}
+
+.body.error {
+    display: none;
+}
+@keyframes pulse  {
+   
+    100% {
+        bottom: 13.5%;
+      
+    }
+}
+@media (max-width: 1023px)   {
+    .body.esServis {
+        display: none;
+    }
+    .body.error {
+        display: block;
+    }
+}
+    
+@media (min-height: 1081px){
+    .body.esServis {
+        display: none;
+    }
+    .body.error {
+        display: block;
+    }
+}
+
+   
+    /* End Service Employee Service  */
+    /* Start Admin Page */
+    /* End Admin Page */
