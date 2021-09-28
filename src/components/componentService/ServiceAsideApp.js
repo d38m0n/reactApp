@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TableBodyApp from './componentAside/ServiceAsideTableBody';
 import TableHeadApp from './componentAside/ServiceAsideThead';
 import AsideSearch from "./componentAside/ServiceAsideSearch";
-import ClientViewAside from "./componentAside/ServiceAsideViewClient"
+import FormApp from "./componentAside/ServiceAsideFromClient"
 class AsideTable extends Component { 
 state ={
     currentyClient:"",
@@ -17,10 +17,13 @@ ChangeViewToShowClient = (idClient) =>{
 };
 
 TableViewAside = () =>(
+    
     <div className="tableSection">
         <TableHeadApp /> 
-        <TableBodyApp chanegView={this.ChangeViewToShowClient}/>                                         
+        <TableBodyApp chanegView={this.ChangeViewToShowClient}/>     
+                                         
     </div>
+    
 );
 NormalViewAside = () => (
     <aside>
@@ -36,10 +39,12 @@ ExitViewClient=()=>(
 render(){
     return ( 
         this.state.currentyClient?
-        <ClientViewAside 
-        currentyClient={this.state.currentyClient}
-        exit={this.ExitViewClient}/>
+        // <ClientViewAside 
+        // currentyClient={this.state.currentyClient}
+        // exit={this.ExitViewClient}/>
+        <FormApp currentyClient={this.state.currentyClient} exit={this.ExitViewClient}/>
         : <this.NormalViewAside/>
+
     ); 
 }
  

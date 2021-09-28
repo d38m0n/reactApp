@@ -5,7 +5,7 @@ const ServiceHeaderApp = () => {
 
     return (     
      <header>
-        <div><img  alt="" src ="Employee Service.png"/></div>
+        <div className="imgHeader"></div>
     </header>
         )
     

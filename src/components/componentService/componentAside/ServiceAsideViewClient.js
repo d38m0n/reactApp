@@ -15,8 +15,10 @@ const ClientButtonsContainer = (props)=>(
 const ClientFrom = (props) => (
 
     <from class="wrapperGrid">
-        <div class="boxClient logoClient">
-            <img src={props.clientData.picture.large} alt=""></img>
+        <div class="boxClient logoClient"
+        style={{ 
+      backgroundImage: `url(${props.clientData.picture.large})`
+    }}>
         </div>
 
         <div class="boxClient informationClient">
