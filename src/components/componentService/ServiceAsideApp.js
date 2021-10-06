@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import TableBodyApp from './componentAside/ServiceAsideTableBody';
 import TableHeadApp from './componentAside/ServiceAsideThead';
 import AsideSearch from "./componentAside/ServiceAsideSearch";
-import FormApp from "./componentAside/ServiceAsideFromClient"
+// import FormApp from "./componentAside/ServiceAsideFromClient"
+import FormAppClient from "./serviceFromElement/FormAppCustomer"
 class AsideTable extends Component { 
 state ={
     currentyClient:"",
@@ -39,12 +40,8 @@ ExitViewClient=()=>(
 render(){
     return ( 
         this.state.currentyClient?
-        // <ClientViewAside 
-        // currentyClient={this.state.currentyClient}
-        // exit={this.ExitViewClient}/>
-        <FormApp currentyClient={this.state.currentyClient} exit={this.ExitViewClient}/>
+        <FormAppClient currentyClient={this.state.currentyClient} exit={this.ExitViewClient}/>
         : <this.NormalViewAside/>
-
     ); 
 }
  

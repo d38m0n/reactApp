@@ -40,7 +40,7 @@ class TableBody extends Component {
 
      
     render() {
-       
+     
         return(
         this.state.isLoaded ?
         <div className="tbl-content">

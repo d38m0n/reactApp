@@ -4,8 +4,19 @@
     "name": "PPS",
     "value": "00001"
   }, 
-  "nat": "Polska",
-  "project": "ES.2.2",
+  "customer": {
+	"username": "TesT2021",
+	"nat": "Polska",
+	"project": "ES.2.2",
+	"date": "2002-05-21",
+    "personReg": "KD201",
+	"subscription":"gold",
+	"subMounth":12,
+	"type":"PRO",
+	"subPrice":49,
+	"description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+  	
+  },
   "company": {
 	"brand":"D38M0N",
 	"companyID": "081-454-0666",
@@ -15,9 +26,10 @@
   "representative": {
     "title": "COO",
     "first": "Tester1",
-	  "phone": "000333300",
     "surname": "Gibson",
-	  "email": "tester1.gibson@d38m0n.com"
+	"email": "tester1.gibson@d38m0n.com",
+	"phone": "000333300"
+	
   },
   "location": {
 		"street": "9278 new road",
@@ -26,8 +38,7 @@
 		"postcode": "93-027"
 	},
   "login": {
-    "uuid": "155e77ee-ba6d-486f-95ce-0e0c0fb4b919",
-    "username": "TesT2021"
+    "uuid": "155e77ee-ba6d-486f-95ce-0e0c0fb4b919"
   },
   "wallet": {
     "walletID": "wall3004M",
@@ -41,21 +52,15 @@
      "storeID": "stor3004M",
      "sumItem": 26
   },
-  "registered": {
-    "date": "2002-05-21",
-    "personReg": "KD201",
-	"subscription":"gold",
-	"subMounth":12,
-	"subPrice":49	
-  },
+
   "picture": {
     "large": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8LPGTLODYwJ-FSVv2FItL7mdD2k1pM9AA4DuWa8OKnGpetfQvVSsUXFsv2gWt96UdW-w&usqp=CAU",
     "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
     "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
   },
-  "isActive": true,
-  "type":"PRO",
-  "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+  "isActive": true
+  
+
 }
 ]
   
