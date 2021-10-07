@@ -61,6 +61,69 @@
   "isActive": true
   
 
+},
+{
+  "id": {
+    "name": "PPS",
+    "value": "00002"
+  }, 
+  "customer": {
+	"username": "TesT2022",
+	"nat": "Polska",
+	"project": "ES.2.2",
+	"date": "2002-05-21",
+    "personReg": "KD201",
+	"subscription":"gold",
+	"subMounth":12,
+	"type":"PRO",
+	"subPrice":49,
+	"description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+  	
+  },
+  "company": {
+	"brand":"D38M0N",
+	"companyID": "081-454-0666",
+	"phoneCompany": "048-962-751-406",
+	"emailCompany": "office@d38m0n.com"
+  },
+  "representative": {
+    "title": "COO",
+    "first": "Tester2",
+    "surname": "Gibson",
+	"email": "tester1.gibson@d38m0n.com",
+	"phone": "000333300"
+	
+  },
+  "location": {
+		"street": "9278 new road",
+		"city": "Krakow",
+		"state": "Malopolska",
+		"postcode": "93-027"
+	},
+  "login": {
+    "uuid": "155e77ee-ba6d-486f-95ce-0e0c0fb4b919"
+  },
+  "wallet": {
+    "walletID": "wall3004M",
+    "sumWallet": 26
+  },
+   "service": {
+    "serviceID": "serv3004M",
+    "totalService": 26
+  },
+	"store": {
+     "storeID": "stor3004M",
+     "sumItem": 26
+  },
+
+  "picture": {
+    "large": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8LPGTLODYwJ-FSVv2FItL7mdD2k1pM9AA4DuWa8OKnGpetfQvVSsUXFsv2gWt96UdW-w&usqp=CAU",
+    "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
+  },
+  "isActive": true
+  
+
 }
 ]
   

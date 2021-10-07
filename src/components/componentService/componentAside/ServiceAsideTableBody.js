@@ -29,13 +29,28 @@ class TableBody extends Component {
        }
 
      ClientLock(id){
-        console.log(id, "lock");
+        const clients = [...this.state.clients];
+        console.log("lock")
+        const index = clients.findIndex(c => c.id.value === id)
+        clients.forEach(c => {
+            if (c.id.value === id){
+                c.isActive = !c.isActive;
+                console.log(c.isActive)
+            }
+        });
+        this.setState({
+             clients
+           })
      }
   
-     ClientDelete(id){
-         console.log(id,"delete")
-         this.fetchData();
-         
+     ClientDelete = (id) => {
+         const clients = [...this.state.clients];
+         console.log("Delete")
+         const index = clients.findIndex(c => c.id.value === id)
+         clients.splice(index, 1);
+         this.setState({
+              clients
+            })
      }
 
      
